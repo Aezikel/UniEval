@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:enabled="true"
+        android:icon="@drawable/outline_home_work_24"
+        android:title="Home"
+        />
+    <item
+        android:id="@+id/criteriaSearchFragment"
+        android:enabled="true"
+        android:icon="@drawable/outline_manage_search_24"
+        android:title="Criteria search"
+        />
+
+    <item
+        android:id="@+id/favoritesFragment"
+        android:enabled="true"
+        android:icon="@drawable/outline_favorite_border_24"
+        android:title="Favorites"/>
+
+</menu>

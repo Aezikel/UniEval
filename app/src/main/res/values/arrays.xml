@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="user_type">
+        <item>Student - Looking for a school?</item>
+        <item>Professor - Looking for a job?</item>
+    </array>
+
+    <array name="session_type">
+        <item>Data Manager</item>
+        <item>Feedback Manager</item>
+    </array>
+
+    <array name="title">
+        <item>Mr.</item>
+        <item>Mrs.</item>
+        <item>Ms.</item>
+        <item>Prof.</item>
+        <item>Dr.</item>
+    </array>
+
+    <array name="discipline">
+        <item>Engineering</item>
+        <item>Art</item>
+        <item>Science</item>
+        <item>Business</item>
+    </array>
+
+</resources>
