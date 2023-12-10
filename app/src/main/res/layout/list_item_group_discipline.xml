@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/discipline_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_format_paint_24"
+        app:tint="@color/iconColor2" />
+
+    <TextView
+        android:id="@+id/discipline_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Art and Humanity"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintBottom_toTopOf="@+id/discipline_courseSizeTextView"
+        app:layout_constraintStart_toEndOf="@+id/discipline_imageView"
+        app:layout_constraintTop_toTopOf="@+id/discipline_imageView" />
+
+    <TextView
+        android:id="@+id/discipline_courseSizeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="5 Courses"
+        android:textAppearance="?attr/textAppearanceBody2"
+        app:layout_constraintBottom_toBottomOf="@+id/discipline_imageView"
+        app:layout_constraintStart_toStartOf="@+id/discipline_textView"
+        app:layout_constraintTop_toBottomOf="@+id/discipline_textView" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/discipline_courseSizeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/discipline_courseSizeTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

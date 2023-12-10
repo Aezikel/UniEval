@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/review_imageCardView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="160dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/review_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/review_nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Bruce Harrington"
+        android:textStyle="bold"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintBottom_toTopOf="@+id/review_classTextView"
+        app:layout_constraintStart_toEndOf="@+id/review_imageCardView"
+        app:layout_constraintTop_toTopOf="@+id/review_imageCardView"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/review_classTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Alumni"
+        android:textAppearance="?attr/textAppearanceBody2"
+        app:layout_constraintBottom_toBottomOf="@+id/review_imageCardView"
+        app:layout_constraintStart_toStartOf="@+id/review_nameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/review_nameTextView" />
+
+    <RatingBar
+        android:id="@+id/review_ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:progressTint="@color/colorSecondary"
+        android:rating="4"
+        app:layout_constraintBottom_toBottomOf="@+id/review_nameTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/review_nameTextView" />
+
+    <TextView
+        android:id="@+id/review_messageTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:lineSpacingExtra="2sp"
+        android:textAppearance="?attr/textAppearanceCaption"
+        android:text="A very good place to start your bright career. Having lots of courses to study and excellent service and great campus ."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/review_imageCardView"
+        app:layout_constraintTop_toBottomOf="@+id/review_classTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

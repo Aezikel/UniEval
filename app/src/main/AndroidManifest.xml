@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.UniEval"
+        android:theme="@style/Theme.Evaluation"
         tools:targetApi="31" >
 
         <activity
@@ -29,19 +29,31 @@
             android:name=".ui.user.UserMainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.loginuser.UserLoginActivity"
+            android:name=".ui.auth.loginuser.UserLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.loginadmin.AdminLoginActivity"
+            android:name=".ui.auth.loginadmin.AdminLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.registeruser.RegisterUserActivity"
+            android:name=".ui.auth.registeruser.RegisterUserActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.forgotpassword.ForgotPasswordActivity"
+            android:name=".ui.auth.forgotpassword.ForgotPasswordActivity"
             android:exported="false" />
 
 
     </application>
+
+    <queries>
+        <!-- Specific intents you query for -->
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="mailto" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent>
+    </queries>
 
 </manifest>

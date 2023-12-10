@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 
 import com.example.unieval.R;
 import com.example.unieval.databinding.ActivityProfileBinding;
-import com.example.unieval.ui.registeruser.RegisterUserActivity;
+import com.example.unieval.ui.auth.registeruser.RegisterUserActivity;
 
 public class ProfileActivity extends AppCompatActivity {
 

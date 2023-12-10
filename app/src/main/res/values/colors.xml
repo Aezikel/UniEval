@@ -5,11 +5,48 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
     <color name="light_blue_600">#FF039BE5</color>
     <color name="light_blue_900">#FF01579B</color>
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
+
+    <color name="blue_200">#90caf9</color>
+    <color name="blue_500">#2196f3</color>
+    <color name="blue_700">#1976d2</color>
+
+
+    <!-- APP COLOR -->
+    <color name="colorPrimaryDark">#232F34</color>
+    <color name="colorPrimary">#344955</color>
+    <color name="colorPrimaryVariant">#4A6572</color>
+    <color name="colorSecondary">#F9AA33</color>
+    <color name="colorOnSecondary">@color/colorPrimaryDark</color>
+    <color name="colorSurface">#F5F5F5</color>
+    <color name="colorOnSurface">@color/colorPrimary</color>
+    <color name="colorBackground">#F5F5F5</color>
+
+    <color name="textColor">@color/colorPrimaryDark</color>
+    <color name="textColor2">@color/white</color>
+    <color name="textButtonColor">@color/colorPrimary</color>
+    <color name="iconColor2">#383838</color>
+    <color name="toolbarColor">@color/colorPrimary</color>
+
+    <color name="iconColor">#000000</color>
+    <color name="snackBarColor">#383838</color>
+    <color name="dividerColor">#B4BAC0</color>
+    <color name="cardDetailsColor">#4A7BA7</color>
+    <color name="cardDetailsTextColor">@color/colorOnSurface</color>
+
+    <color name="cardViewBackgroundColor">@color/white</color>
+    <color name="constrainBackgroundColor">#dedede</color>
+    <color name="verify">#00E676</color>
+    <color name="unverify">#FF6E40</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey">#424242</color>
+    <color name="orange">#FF5722</color>
+
 </resources>

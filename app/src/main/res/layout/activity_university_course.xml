@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.admin.manageuniversity.course.UniversityCourseActivity">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/uni_course_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/menu_done"
+            android:background="@color/toolbarColor"
+            app:navigationIconTint="@color/white"
+            app:titleTextColor="@color/white"
+            app:popupTheme="@style/ThemeOverlay.Evaluation.Toolbar"
+            app:navigationIcon="@drawable/baseline_arrow_back_24"
+            app:title="Add Course" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uni_course_toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/engineering_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Discipline of Engineering"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textColor="@color/textButtonColor"
+                    app:layout_constraintBottom_toBottomOf="@+id/engineering_Button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/engineering_Button" />
+
+                <Button
+                    android:id="@+id/engineering_Button"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Add"
+                    android:textColor="@color/textButtonColor"
+                    app:iconTint="@color/textButtonColor"
+                    android:textAllCaps="false"
+                    app:icon="@drawable/baseline_edit_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/engineering_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/engineering_Button"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/list_item_courses" />
+
+                <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                    android:id="@+id/engineering_empty_state"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:visibility="gone"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="@+id/engineering_recyclerView"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="@+id/engineering_recyclerView">-->
+
+                <!--                    <ImageView-->
+                <!--                        android:id="@+id/profile_page_imageView"-->
+                <!--                        android:layout_width="200dp"-->
+                <!--                        android:layout_height="200dp"-->
+                <!--                        android:scaleType="centerCrop"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toTopOf="parent"-->
+                <!--                        app:srcCompat="@drawable/undraw_empty_search" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/textView23"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginTop="16dp"-->
+                <!--                        android:text="Nothing to display"-->
+                <!--                        android:textAppearance="?attr/textAppearanceHeadline6"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="@+id/profile_page_imageView"-->
+                <!--                        app:layout_constraintStart_toStartOf="@+id/profile_page_imageView"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@+id/profile_page_imageView" />-->
+
+
+                <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                <TextView
+                    android:id="@+id/art_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Discipline of Art and Humanity"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textColor="@color/textButtonColor"
+                    app:layout_constraintBottom_toBottomOf="@+id/art_Button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/art_Button" />
+
+                <Button
+                    android:id="@+id/art_Button"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    app:icon="@drawable/baseline_edit_24"
+                    android:textColor="@color/textButtonColor"
+                    app:iconTint="@color/textButtonColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/engineering_recyclerView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/art_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/art_Button"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/list_item_courses" />
+
+                <TextView
+                    android:id="@+id/science_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Discipline of Science"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textColor="@color/textButtonColor"
+                    app:layout_constraintBottom_toBottomOf="@+id/science_Button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/science_Button" />
+
+                <Button
+                    android:id="@+id/science_Button"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    app:icon="@drawable/baseline_edit_24"
+                    android:textColor="@color/textButtonColor"
+                    app:iconTint="@color/textButtonColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/art_recyclerView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/science_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/science_Button"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/list_item_courses" />
+
+                <TextView
+                    android:id="@+id/business_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Discipline of Business"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textColor="@color/textButtonColor"
+                    app:layout_constraintBottom_toBottomOf="@+id/buisness_Button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/buisness_Button" />
+
+                <Button
+                    android:id="@+id/buisness_Button"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    app:icon="@drawable/baseline_edit_24"
+                    android:textColor="@color/textButtonColor"
+                    app:iconTint="@color/textButtonColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/science_recyclerView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/business_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/buisness_Button"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/list_item_courses" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
