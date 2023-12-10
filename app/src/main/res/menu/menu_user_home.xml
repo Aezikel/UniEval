@@ -4,10 +4,14 @@
 
     <item
         android:id="@+id/search_menu_item"
-        android:icon="@drawable/baseline_search2_24"
-        android:iconTint="@color/white"
+        android:icon="@drawable/baseline_search_24"
         android:title="@string/search_title"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="collapseActionView|ifRoom" />
+
+    <item
+        android:id="@+id/result_menu_item"
+        android:title="see results"
+        app:showAsAction="always" />
 
 </menu>
