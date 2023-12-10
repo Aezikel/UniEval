@@ -1,4 +1,4 @@
-package com.example.unieval.ui.registeruser;
+package com.example.unieval.ui.auth.registeruser;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,25 +13,30 @@ import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.example.unieval.R;
+import com.example.unieval.data.BaseRepository;
+import com.example.unieval.data.pojo.User;
 import com.example.unieval.databinding.ActivityRegisterUserBinding;
-import com.example.unieval.ui.loginuser.UserLoginActivity;
+import com.example.unieval.ui.auth.loginuser.UserLoginActivity;
 import com.example.unieval.ui.user.UserMainActivity;
+import com.example.unieval.util.Constants;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class RegisterUserActivity extends AppCompatActivity {
 
     ActivityRegisterUserBinding binding;
     private FirebaseAuth mAuth;
+    BaseRepository baseRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_register_user);
+
+        baseRepository = new BaseRepository();
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -70,7 +75,14 @@ public class RegisterUserActivity extends AppCompatActivity {
         if (!TextUtils.isEmpty(firstName) && !TextUtils.isEmpty(lastName) && !TextUtils.isEmpty(userType)
                 && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password) && !TextUtils.isEmpty(confirmPassword)) {
             if (password.equals(confirmPassword)) {
-                createUser(email, password, firstName);
+                String userCategory;
+                if (userType.equals("Student - Looking for a school?")) {
+                    userCategory = Constants.USER_TYPE_STUDENT;
+                } else {
+                    userCategory = Constants.USER_TYPE_PROFESSOR;
+                }
+                User user = new User(Constants.ROLE_USER, email, firstName, lastName, userCategory);
+                createUser(user, password);
             } else {
                 binding.registerPasswordTextInput.setErrorEnabled(true);
                 binding.registerPasswordTextInput.setError("Password does not match");
@@ -83,31 +95,25 @@ public class RegisterUserActivity extends AppCompatActivity {
     }
 
 
-    public void createUser(String email, String password, String userName) {
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+    public void createUser(User users, String password) {
+        showProgressIndicator(true);
+        mAuth.createUserWithEmailAndPassword(users.getEmail(), password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     FirebaseUser user = mAuth.getCurrentUser();
                     if (user != null) {
-                        UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
-                                .setDisplayName(userName).build();
-                        //.setPhotoUri(Uri.parse("https://example.com/jane-q-user/profile.jpg"))
-
-                        user.updateProfile(profileUpdates).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if (task.isSuccessful()) {
-                                    Intent i = new Intent(RegisterUserActivity.this, UserMainActivity.class);
-                                    startActivity(i);
-                                    finish();
-                                }
-                            }
-                        });
+                        // Save to Database
+                        baseRepository.saveUser(user.getUid(), users);
+                        Intent i = new Intent(RegisterUserActivity.this, UserMainActivity.class);
+                        i.putExtra(Constants.KEY_USER_TYPE, users.getUserType());
+                        startActivity(i);
+                        finish();
                     }
 
                 } else {
                     // If sign in fails, display a message to the user.
+                    showProgressIndicator(false);
                     Log.w("Failed Sign Up", "createUserWithEmail:failure", task.getException());
                     Toast.makeText(RegisterUserActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
@@ -115,6 +121,16 @@ public class RegisterUserActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void showProgressIndicator(Boolean showIndicator) {
+        if (showIndicator) {
+            binding.loadingIndiator.setVisibility(View.VISIBLE);
+            binding.registerPageDoneBtn.setEnabled(false);
+        } else {
+            binding.loadingIndiator.setVisibility(View.GONE);
+            binding.registerPageDoneBtn.setEnabled(true);
+        }
     }
 
 }

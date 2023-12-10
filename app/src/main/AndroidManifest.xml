@@ -29,16 +29,16 @@
             android:name=".ui.user.UserMainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.loginuser.UserLoginActivity"
+            android:name=".ui.auth.loginuser.UserLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.loginadmin.AdminLoginActivity"
+            android:name=".ui.auth.loginadmin.AdminLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.registeruser.RegisterUserActivity"
+            android:name=".ui.auth.registeruser.RegisterUserActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.forgotpassword.ForgotPasswordActivity"
+            android:name=".ui.auth.forgotpassword.ForgotPasswordActivity"
             android:exported="false" />
 
 

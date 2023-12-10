@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.example.unieval.R;
-import com.example.unieval.ui.loginuser.UserLoginActivity;
+import com.example.unieval.ui.auth.loginuser.UserLoginActivity;
 import com.example.unieval.ui.user.UserMainActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;

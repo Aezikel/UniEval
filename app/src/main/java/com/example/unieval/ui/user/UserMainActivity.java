@@ -15,11 +15,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.unieval.R;
 import com.example.unieval.databinding.ActivityUserMainBinding;
-import com.example.unieval.ui.loginuser.UserLoginActivity;
+import com.example.unieval.ui.auth.loginuser.UserLoginActivity;
 import com.example.unieval.ui.user.profile.ProfileActivity;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
