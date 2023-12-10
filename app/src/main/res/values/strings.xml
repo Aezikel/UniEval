@@ -27,4 +27,6 @@
     <string name="read_more">READ MORE</string>
     <string name="overview">Overview</string>
     <string name="disciplines">Disciplines</string>
+    <string name="rating_and_reviews">Rating and reviews</string>
+    <string name="nothing_to_display">Nothing to display</string>
 </resources>
