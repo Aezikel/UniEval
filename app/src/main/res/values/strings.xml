@@ -18,4 +18,12 @@
     <string name="rating">Rating</string>
     <string name="courses">Courses</string>
     <string name="research">Research</string>
+    <string name="mission_statement">Mission Statement</string>
+    <string name="award">Award</string>
+    <string name="illustration">Illustration</string>
+    <string name="bpc">BPC</string>
+    <string name="liberty">Liberty</string>
+    <string name="anderson">Anderson</string>
+    <string name="read_more">READ MORE</string>
+    <string name="overview">Overview</string>
 </resources>
