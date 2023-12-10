@@ -95,16 +95,20 @@ public class TabAboutFragment extends Fragment {
         builder.show();
     }
 
-    public void dialPhoneNumber(String phone) {
+
+
+    public void dialPhoneNumber(String mobile) {
         Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:" + phone));
+        intent.setData(Uri.parse("tel:" + mobile));
+
         if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
             startActivity(intent);
         }
     }
 
-    public void composeEmail(String address) {
-        String[] addresses = {address};
+    public void composeEmail(String email) {
+        String[] addresses = {email};
+
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
         intent.putExtra(Intent.EXTRA_EMAIL, addresses);
