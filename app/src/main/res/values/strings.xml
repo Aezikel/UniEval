@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">UniEval</string>
     <string name="search_title">Search</string>
+    <string name="first_name">First Name</string>
 </resources>
