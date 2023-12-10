@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Evaluation</string>
+    <string name="app_name">UniEval</string>
     <string name="search_title">Search</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
@@ -12,6 +12,6 @@
     <string name="cancel">Cancel</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
-    <string name="app_label">Evaluation</string>
+    <string name="app_label">UniEval</string>
     <string name="search_hint">Enter University Name</string>
 </resources>

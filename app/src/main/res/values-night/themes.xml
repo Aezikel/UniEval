@@ -1,16 +1,47 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.UniEval" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+    <style name="Theme.Evaluation" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorSecondary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <!--        <item name="colorSecondaryVariant">@color/teal_200</item>-->
+        <!--        <item name="colorOnSecondary">@color/black</item>-->
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <!--        <item name="android:textColor">@color/colorOnBackground</item>-->
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+
+        <item name="android:statusBarColor">?attr/colorSurface</item>
         <!-- Customize your theme here. -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Evaluation.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Evaluation.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Evaluation.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Evaluation.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Evaluation.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Evaluation.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Evaluation.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Evaluation.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Evaluation.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Evaluation.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Evaluation.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Evaluation.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Evaluation.Overline</item>
     </style>
+
+    <style name="ThemeOverlay.Evaluation.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_900</item>
+        <item name="fullscreenTextColor">@color/light_blue_A400</item>
+    </style>
+
+    <style name="ThemeOverlay.Evaluation.Admin" parent="Theme.Evaluation">
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+    </style>
+
+
 </resources>
