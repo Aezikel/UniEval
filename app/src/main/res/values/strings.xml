@@ -1,6 +1,17 @@
 <resources>
-    <string name="app_name">UniEval</string>
+    <string name="app_name">Evaluation</string>
     <string name="search_title">Search</string>
-    <string name="first_name">First Name</string>
-    <string name="last_name">Last Name</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login_user">LoginUserActivity</string>
+    <string name="leicester_about">The University of Leicester is a public research university based in Leicester, England. The main campus is south of the city centre, adjacent to Victoria Park. The university\'s predecessor, University College, Leicester, gained university status in 1957.</string>
+    <string name="lorem_ipsum">Unieval (University Evaluation) is a school evaluation system whose objective and purpose is to lay out imperative insight on different schools, by giving a well constructive structure for appraisal of these universities through required user criteria. This application was developed by team 7 for CO7095 coursework-</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="app_label">Evaluation</string>
+    <string name="search_hint">Enter University Name</string>
 </resources>

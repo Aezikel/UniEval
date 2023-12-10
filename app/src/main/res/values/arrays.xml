@@ -12,11 +12,50 @@
     </array>
 
     <array name="title">
-        <item>Mr.</item>
-        <item>Mrs.</item>
-        <item>Ms.</item>
-        <item>Prof.</item>
-        <item>Dr.</item>
+        <item>Mr</item>
+        <item>Mrs</item>
+        <item>Ms</item>
+        <item>Prof</item>
+        <item>Dr</item>
+    </array>
+
+    <string-array name="theme_mode">
+        <item>Dark</item>
+        <item>Light</item>
+    </string-array>
+
+    <array name="review_category">
+        <item>Student</item>
+        <item>Staff</item>
+        <item>Alumni</item>
+    </array>
+
+    <array name="choice">
+        <item>Yes</item>
+        <item>No</item>
+    </array>
+
+    <array name="ratio">
+        <item>1:50</item>
+        <item>1:100</item>
+        <item>1:200</item>
+        <item>1:500</item>
+        <item>1:1000</item>
+    </array>
+
+    <array name="percent">
+        <item>Below 25 percent</item>
+        <item>Between 25 to 50 percent</item>
+        <item>Between 50 to 75 percent</item>
+        <item>Above 75 percent</item>
+    </array>
+
+    <array name="score">
+        <item>Very Bad</item>
+        <item>Bad</item>
+        <item>Good</item>
+        <item>Very Good</item>
+        <item>Excellent</item>
     </array>
 
     <array name="discipline">
@@ -24,6 +63,125 @@
         <item>Art</item>
         <item>Science</item>
         <item>Business</item>
+    </array>
+
+    <array name="all_course">
+
+        <item>MSc in Mechanical Engineering</item>
+        <item>MSc in Electrical and Computer Engineering</item>
+        <item>MSc in Civil and Environmental Engineering</item>
+        <item>MSc in Aerospace Engineering</item>
+        <item>MSc in Biomedical Engineering</item>
+
+        <item>MSc in Digital Media and Culture</item>
+        <item>MSc in Cultural Studies</item>
+        <item>MSc in Literary and Cultural Analysis</item>
+        <item>MSc in Visual Communication Design</item>
+        <item>MSc in Applied Linguistics</item>
+
+        <item>MSc in Computer Science</item>
+        <item>MSc in Data Science and Analytics</item>
+        <item>MSc in Environmental Science</item>
+        <item>MSc in Neuroscience</item>
+        <item>MSc in Materials Science</item>
+
+        <item>MSc in Business Analytics</item>
+        <item>MSc in Finance and Investment</item>
+        <item>MSc in International Business Management</item>
+        <item>MSc in Marketing and Consumer Studies</item>
+        <item>MSc in Entrepreneurship and Innovation</item>
+
+    </array>
+
+    <array name="Engineering_Courses">
+        <item>MSc in Mechanical Engineering</item>
+        <item>MSc in Electrical and Computer Engineering</item>
+        <item>MSc in Civil and Environmental Engineering</item>
+        <item>MSc in Aerospace Engineering</item>
+        <item>MSc in Biomedical Engineering</item>
+    </array>
+
+    <array name="Art_and_Humanities_Courses">
+        <item>MSc in Digital Media and Culture</item>
+        <item>MSc in Cultural Studies</item>
+        <item>MSc in Literary and Cultural Analysis</item>
+        <item>MSc in Visual Communication Design</item>
+        <item>MSc in Applied Linguistics</item>
+    </array>
+
+    <array name="Science_Courses">
+        <item>MSc in Computer Science</item>
+        <item>MSc in Data Science and Analytics</item>
+        <item>MSc in Environmental Science</item>
+        <item>MSc in Neuroscience</item>
+        <item>MSc in Materials Science</item>
+    </array>
+
+    <array name="Business_Courses">
+        <item>MSc in Business Analytics</item>
+        <item>MSc in Finance and Investment</item>
+        <item>MSc in International Business Management</item>
+        <item>MSc in Marketing and Consumer Studies</item>
+        <item>MSc in Entrepreneurship and Innovation</item>
+    </array>
+
+    <array name="all_research">
+        <item>Robotics and Automation</item>
+        <item>Communication Networks</item>
+        <item>Sustainable Infrastructure</item>
+        <item>Aerodynamics and Fluid Mechanics</item>
+        <item>Medical Imaging</item>
+
+        <item>Digital Humanities</item>
+        <item>Cultural Heritage Preservation</item>
+        <item>Comparative Literature</item>
+        <item>Information Visualization</item>
+        <item>Sociolinguistics</item>
+
+        <item>Artificial Intelligence</item>
+        <item>Big Data Analytics</item>
+        <item>Climate Change</item>
+        <item>Cognitive Neuroscience</item>
+        <item>Nanomaterials</item>
+
+        <item>Predictive Analytics</item>
+        <item>Financial Modeling</item>
+        <item>Cross-Cultural Management</item>
+        <item>Consumer Behavior</item>
+        <item>Start-up Ecosystems</item>
+
+    </array>
+
+    <array name="Engineering_Research">
+        <item>Robotics and Automation</item>
+        <item>Communication Networks</item>
+        <item>Sustainable Infrastructure</item>
+        <item>Aerodynamics and Fluid Mechanics</item>
+        <item>Medical Imaging</item>
+    </array>
+
+    <array name="Art_and_Humanities_Research">
+        <item>Digital Humanities</item>
+        <item>Cultural Heritage Preservation</item>
+        <item>Comparative Literature</item>
+        <item>Information Visualization</item>
+        <item>Sociolinguistics</item>
+    </array>
+
+    <array name="Science_Research">
+        <item>Artificial Intelligence</item>
+        <item>Big Data Analytics</item>
+        <item>Climate Change</item>
+        <item>Cognitive Neuroscience</item>
+        <item>Nanomaterials</item>
+    </array>
+
+    <array name="Business_Research">
+        <item>Predictive Analytics</item>
+        <item>Financial Modeling</item>
+        <item>Cross-Cultural Management</item>
+        <item>Consumer Behavior</item>
+        <item>Start-up Ecosystems</item>
     </array>
 
 </resources>

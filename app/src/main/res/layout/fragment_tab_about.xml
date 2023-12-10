@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.user.universitydetails.about.TabAboutFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--            <TextView-->
+                <!--                android:id="@+id/textView4"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginStart="16dp"-->
+                <!--                android:layout_marginTop="16dp"-->
+                <!--                android:text="Rating"-->
+                <!--                android:textAlignment="viewStart"-->
+                <!--                android:textColor="@color/black"-->
+                <!--                android:textStyle="bold"-->
+                <!--                app:layout_constraintStart_toStartOf="parent"-->
+                <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--            <TextView-->
+                <!--                android:id="@+id/textView"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginStart="16dp"-->
+                <!--                android:layout_marginTop="8dp"-->
+                <!--                android:text="4.3"-->
+                <!--                android:textColor="@color/black"-->
+                <!--                android:textSize="48sp"-->
+                <!--                app:layout_constraintStart_toStartOf="parent"-->
+                <!--                app:layout_constraintTop_toBottomOf="@+id/textView4" />-->
+
+                <!--            <RatingBar-->
+                <!--                android:id="@+id/ratingBar"-->
+                <!--                style="?android:attr/ratingBarStyleSmall"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginStart="16dp"-->
+                <!--                android:rating="4"-->
+                <!--                android:progressTint="@color/grey"-->
+                <!--                app:layout_constraintBottom_toBottomOf="@+id/textView"-->
+                <!--                app:layout_constraintStart_toEndOf="@+id/textView"-->
+                <!--                app:layout_constraintTop_toTopOf="@+id/textView" />-->
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Overview"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="8sp"
+                    android:maxLines="3"
+                    android:text="@string/leicester_about"
+                    android:textAlignment="textStart"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="READ MORE"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textStyle="bold"
+                    android:textColor="@color/textButtonColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Awards"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                <!--            <androidx.recyclerview.widget.RecyclerView-->
+                <!--                android:id="@+id/recyclerView2"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="16dp"-->
+                <!--                android:orientation="horizontal"-->
+                <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                app:layout_constraintStart_toStartOf="parent"-->
+                <!--                app:layout_constraintTop_toBottomOf="@+id/textView8"-->
+                <!--                tools:itemCount="3"-->
+                <!--                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+                <!--                tools:listitem="@layout/list_item_award" />-->
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/award_imageCardView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="?attr/colorPrimary"
+                    app:cardCornerRadius="160dp"
+                    app:layout_constraintEnd_toStartOf="@+id/award_imageCardView1"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+                    <ImageView
+                        android:id="@+id/award_imageView"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/baseline_face_24"
+                        app:tint="@color/textColor2" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/textViews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Anderson"
+                    android:textAlignment="center"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintEnd_toEndOf="@+id/award_imageCardView"
+                    app:layout_constraintStart_toStartOf="@+id/award_imageCardView"
+                    app:layout_constraintTop_toBottomOf="@+id/award_imageCardView" />
+
+                <TextView
+                    android:id="@+id/textViews1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Award"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintEnd_toEndOf="@+id/textViews"
+                    app:layout_constraintStart_toStartOf="@+id/textViews"
+                    app:layout_constraintTop_toBottomOf="@+id/textViews" />
+
+                <!-- award 2-->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/award_imageCardView1"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    app:cardBackgroundColor="?attr/colorPrimary"
+                    app:cardCornerRadius="160dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/award_imageCardView"
+                    app:layout_constraintEnd_toStartOf="@+id/award_imageCardView2"
+                    app:layout_constraintStart_toEndOf="@+id/award_imageCardView"
+                    app:layout_constraintTop_toTopOf="@+id/award_imageCardView">
+
+                    <ImageView
+                        android:id="@+id/award_imageView1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:tint="@color/textColor2"
+                        app:srcCompat="@drawable/baseline_stars_24" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/textViews2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Liberty"
+                    android:textAlignment="center"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintEnd_toEndOf="@+id/award_imageCardView1"
+                    app:layout_constraintStart_toStartOf="@+id/award_imageCardView1"
+                    app:layout_constraintTop_toBottomOf="@+id/award_imageCardView1" />
+
+                <TextView
+                    android:id="@+id/textViews3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Award"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintEnd_toEndOf="@+id/textViews2"
+                    app:layout_constraintStart_toStartOf="@+id/textViews2"
+                    app:layout_constraintTop_toBottomOf="@+id/textViews2" />
+
+                <!-- award 3 -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/award_imageCardView2"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    app:cardBackgroundColor="?attr/colorPrimary"
+                    app:cardCornerRadius="160dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/award_imageCardView1"
+                    app:layout_constraintEnd_toStartOf="@+id/award_imageCardView3"
+                    app:layout_constraintStart_toEndOf="@+id/award_imageCardView1"
+                    app:layout_constraintTop_toTopOf="@+id/award_imageCardView1">
+
+                    <ImageView
+                        android:id="@+id/award_imageView2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:tint="@color/textColor2"
+                        app:srcCompat="@drawable/baseline_military_tech_24" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/textViews4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="BPC"
+                    android:textAlignment="center"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintEnd_toEndOf="@+id/award_imageCardView2"
+                    app:layout_constraintStart_toStartOf="@+id/award_imageCardView2"
+                    app:layout_constraintTop_toBottomOf="@+id/award_imageCardView2" />
+
+                <TextView
+                    android:id="@+id/textViews5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Award"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintEnd_toEndOf="@+id/textViews4"
+                    app:layout_constraintStart_toStartOf="@+id/textViews4"
+                    app:layout_constraintTop_toBottomOf="@+id/textViews4" />
+
+
+                <!-- award 4-->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/award_imageCardView3"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    app:cardBackgroundColor="?attr/colorPrimary"
+                    app:cardCornerRadius="160dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/award_imageCardView2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/award_imageCardView2"
+                    app:layout_constraintTop_toTopOf="@+id/award_imageCardView2">
+
+                    <ImageView
+                        android:id="@+id/award_imageView3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:tint="@color/textColor2"
+                        app:srcCompat="@drawable/baseline_brush_24" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/textViews6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Illustration"
+                    android:textAlignment="center"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintEnd_toEndOf="@+id/award_imageCardView3"
+                    app:layout_constraintStart_toStartOf="@+id/award_imageCardView3"
+                    app:layout_constraintTop_toBottomOf="@+id/award_imageCardView3" />
+
+                <TextView
+                    android:id="@+id/textViews7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Award"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintEnd_toEndOf="@+id/textViews6"
+                    app:layout_constraintStart_toStartOf="@+id/textViews6"
+                    app:layout_constraintTop_toBottomOf="@+id/textViews6" />
+
+
+                <!-- end of award -->
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Mission Statement"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViews1" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:lineSpacingExtra="8sp"
+                    android:maxLines="4"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:text="@string/lorem_ipsum"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Contact Us"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16"
+                    app:srcCompat="@drawable/baseline_location_on_24"
+                    app:tint="@color/iconColor2" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="University Rd, Leicester LE1 7RH, United Kingdom"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView"
+                    app:srcCompat="@drawable/baseline_phone_24"
+                    app:tint="@color/iconColor2" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="+44 116 252 2522"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                    app:srcCompat="@drawable/baseline_email_24"
+                    app:tint="@color/iconColor2" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="study@le.ac.uk"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
