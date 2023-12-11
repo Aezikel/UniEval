@@ -3,11 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/colorSurface"
         android:theme="@style/ThemeOverlay.Evaluation.FullscreenContainer">
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/fragment_home_recyclerView"
@@ -19,6 +21,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/list_item_university" />
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/user_home_empty_state"
             android:layout_width="wrap_content"
@@ -28,6 +31,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/fragment_home_recyclerView">
+
 
             <ImageView
                 android:id="@+id/profile_page_imageView"
@@ -39,12 +43,13 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/undraw_empty_search" />
 
+
             <TextView
                 android:id="@+id/textView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Nothing to display"
+                android:text="@string/nothing_to_display"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/profile_page_imageView"
@@ -52,5 +57,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/profile_page_imageView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

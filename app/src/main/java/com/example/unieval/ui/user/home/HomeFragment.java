@@ -48,10 +48,17 @@ public class HomeFragment extends Fragment {
         return binding.getRoot();
     }
 
+
+
+
+
+
+
     public void initAdapter() {
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
         binding.fragmentHomeRecyclerView.setLayoutManager(llm);
         binding.fragmentHomeRecyclerView.setHasFixedSize(true);
+
         universityAdapter = new UniversityAdapter(new UniversityAdapter.ListItemClickListener() {
             @Override
             public void onListItemClick(String universityId) {
