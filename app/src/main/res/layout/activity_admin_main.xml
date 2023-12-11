@@ -27,6 +27,7 @@
                 app:titleTextColor="@color/white"
                 app:title="Home" />
 
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/admin_home_recyclerview"
                 android:layout_width="match_parent"
