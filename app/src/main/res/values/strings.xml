@@ -29,4 +29,14 @@
     <string name="disciplines">Disciplines</string>
     <string name="rating_and_reviews">Rating and reviews</string>
     <string name="nothing_to_display">Nothing to display</string>
+    <string name="see_results">see results</string>
+    <string name="select">Select</string>
+    <string name="internship_opportunities">Internship opportunities</string>
+    <string name="grad_employment_rate">Grad Employment rate</string>
+    <string name="teacher_student_ratio">Teacher Student Ratio</string>
+    <string name="facilities_score">Facilities Score</string>
+    <string name="max">Max</string>
+    <string name="min">Min</string>
+    <string name="fees">Fees</string>
+    <string name="course">Course</string>
 </resources>
