@@ -3,13 +3,9 @@
     <style name="Theme.Evaluation" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
         <item name="colorPrimary">@color/colorSecondary</item>
-
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-
         <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
-
         <item name="colorOnPrimary">@color/white</item>
-
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/colorSecondary</item>
@@ -19,7 +15,6 @@
         <item name="colorSurface">@color/colorSurface</item>
         <item name="colorOnSurface">@color/colorOnSurface</item>
         <item name="android:statusBarColor">?attr/colorSurface</item>
-
 
         <!-- Theme Customization -->
         <item name="textAppearanceHeadline1">@style/TextAppearance.Evaluation.Headline1</item>
@@ -36,8 +31,6 @@
         <item name="textAppearanceButton">@style/TextAppearance.Evaluation.Button</item>
         <item name="textAppearanceCaption">@style/TextAppearance.Evaluation.Caption</item>
         <item name="textAppearanceOverline">@style/TextAppearance.Evaluation.Overline</item>
-
-
     </style>
 
 
