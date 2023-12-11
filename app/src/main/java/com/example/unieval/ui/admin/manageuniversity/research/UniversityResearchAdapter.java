@@ -83,10 +83,8 @@ public class UniversityResearchAdapter extends RecyclerView.Adapter<UniversityRe
     }
 
     class UniversityResearchViewHolder extends RecyclerView.ViewHolder {
-
         TextView courseTitle, coursePrice;
         ImageView menu;
-
         public UniversityResearchViewHolder(@NonNull View itemView) {
             super(itemView);
             courseTitle = itemView.findViewById(R.id.courseTitle_textView);

@@ -5,6 +5,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+
+import com.example.unieval.R;
+import com.example.unieval.data.pojo.Research;
+import com.example.unieval.databinding.ActivityUniversityResearchBinding;
+import com.example.unieval.util.Constants;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.textfield.TextInputEditText;
+
+import java.util.ArrayList;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -19,15 +28,6 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
-
-import com.example.unieval.R;
-import com.example.unieval.data.pojo.Research;
-import com.example.unieval.databinding.ActivityUniversityResearchBinding;
-import com.example.unieval.util.Constants;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.google.android.material.textfield.TextInputEditText;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -292,6 +292,7 @@ public class UniversityResearchActivity extends AppCompatActivity {
         return entries;
     }
 
+
     public List<String> arrayToList(String[] array) {
         List<String> entries = new ArrayList<>();
         entries.addAll(Arrays.asList(array));
@@ -311,16 +312,6 @@ public class UniversityResearchActivity extends AppCompatActivity {
         updateTitleList(researchResult, businessResearchTitleList, Constants.DISCIPLINE_BUSINESS);
     }
 
-    public List<Research> segmentList(List<Research> masterList, String discipline) {
-        List<Research> disciplineList = new ArrayList<>();
-        for (Research r : masterList) {
-            if (r.getResearchDiscipline().equals(discipline)) {
-                // create discipline list
-                disciplineList.add(r);
-            }
-        }
-        return disciplineList;
-    }
 
     public void updateTitleList(List<Research> masterList, List<String> masterTitleList, String discipline) {
         List<String> disciplineTitleList = new ArrayList<>();
@@ -334,6 +325,18 @@ public class UniversityResearchActivity extends AppCompatActivity {
                 masterTitleList.remove(title);
             }
         }
+    }
+
+
+    public List<Research> segmentList(List<Research> masterList, String discipline) {
+        List<Research> disciplineList = new ArrayList<>();
+        for (Research r : masterList) {
+            if (r.getResearchDiscipline().equals(discipline)) {
+                // create discipline list
+                disciplineList.add(r);
+            }
+        }
+        return disciplineList;
     }
 
     public void validateCredentials() {

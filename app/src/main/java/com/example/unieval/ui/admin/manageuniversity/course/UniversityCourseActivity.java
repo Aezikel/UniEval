@@ -6,27 +6,24 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.text.TextUtils;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.ImageView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
-
 import com.example.unieval.R;
 import com.example.unieval.data.pojo.Course;
 import com.example.unieval.databinding.ActivityUniversityCourseBinding;
 import com.example.unieval.util.Constants;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
-
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.ImageView;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -65,7 +62,8 @@ public class UniversityCourseActivity extends AppCompatActivity {
 
         if (courseResult != null) {
             loadEntries(courseResult);
-        } else {
+        }
+        else {
             engineeringList = new ArrayList<>();
             artList = new ArrayList<>();
             scienceList = new ArrayList<>();
@@ -128,8 +126,10 @@ public class UniversityCourseActivity extends AppCompatActivity {
     }
 
     public void createInputDialog(String discipline) {
+
         // Create a MaterialAlertDialog and set the title and custom view for collecting input and also click listeners
         // for the positive and negative buttons on the dialog.
+
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
         builder.setTitle("Add a Course");
 
