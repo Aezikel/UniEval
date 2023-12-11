@@ -3,6 +3,10 @@ package com.example.unieval.ui.admin.manageuniversity.profile;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
+
+import com.example.unieval.data.pojo.Profile;
+import com.example.unieval.databinding.ActivityUniversityProfileBinding;
+import com.example.unieval.util.Constants;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -17,9 +21,6 @@ import androidx.databinding.DataBindingUtil;
 
 import com.bumptech.glide.Glide;
 import com.example.unieval.R;
-import com.example.unieval.data.pojo.Profile;
-import com.example.unieval.databinding.ActivityUniversityProfileBinding;
-import com.example.unieval.util.Constants;
 
 public class UniversityProfileActivity extends AppCompatActivity {
 
@@ -82,6 +83,7 @@ public class UniversityProfileActivity extends AppCompatActivity {
         } else {
             Glide.with(getApplicationContext()).load(photo).into(binding.uniImageImageView);
         }
+
         binding.uniNameTextInputEditText.setText(profile.getName());
         binding.uniOverviewTextInputEditText.setText(profile.getOverview());
         binding.uniMissionTextInputEditText.setText(profile.getMission());

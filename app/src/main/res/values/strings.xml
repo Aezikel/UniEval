@@ -62,4 +62,6 @@
     <string name="confirm">Confirm</string>
     <string name="reset">Reset</string>
     <string name="login">Login</string>
+    <string name="add_details_of_university_in_these_category">Add Details of University in these Category</string>
+    <string name="criteria_score">Criteria Score</string>
 </resources>

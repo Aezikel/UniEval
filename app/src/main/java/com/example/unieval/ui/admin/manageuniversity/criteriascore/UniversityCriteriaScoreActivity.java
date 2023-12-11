@@ -3,6 +3,10 @@ package com.example.unieval.ui.admin.manageuniversity.criteriascore;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.unieval.R;
+import com.example.unieval.data.pojo.CriteriaScore;
+import com.example.unieval.databinding.ActivityUniversityCriteriaScoreBinding;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,9 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
 
-import com.example.unieval.R;
-import com.example.unieval.data.pojo.CriteriaScore;
-import com.example.unieval.databinding.ActivityUniversityCriteriaScoreBinding;
 import com.example.unieval.util.Constants;
 
 public class UniversityCriteriaScoreActivity extends AppCompatActivity {
@@ -170,7 +171,9 @@ public class UniversityCriteriaScoreActivity extends AppCompatActivity {
 
     }
 
-    public CriteriaScore mapEntries(String internship, String studentTeacherRatio, String graduateEmploymentPercent, String workLifeBalance, String professionalDevelopment, String facilityScore) {
+    public CriteriaScore mapEntries(String internship, String studentTeacherRatio,
+                                    String graduateEmploymentPercent, String workLifeBalance,
+                                    String professionalDevelopment, String facilityScore) {
 
         boolean mInternship, mProfessionalDevelopment;
         int mStudentTeacherRatio, mGraduateEmploymentPercent, mWorkLifeBalance, mFacilityScore;
@@ -181,6 +184,7 @@ public class UniversityCriteriaScoreActivity extends AppCompatActivity {
         } else {
             mInternship = false;
         }
+
 
         // StudentTeacherRatio
         if (studentTeacherRatio.equals(studentTeacherRatioAdapter.getItem(0))) {
@@ -195,6 +199,7 @@ public class UniversityCriteriaScoreActivity extends AppCompatActivity {
             mStudentTeacherRatio = 5;
         }
 
+
         // GraduateEmploymentPercent
         if (graduateEmploymentPercent.equals(graduateEmploymentPercentAdapter.getItem(0))) {
             mGraduateEmploymentPercent = 1;
@@ -205,6 +210,7 @@ public class UniversityCriteriaScoreActivity extends AppCompatActivity {
         } else {
             mGraduateEmploymentPercent = 4;
         }
+
 
         // WorkLifeBalance
         if (workLifeBalance.equals(workLifeBalanceAdapter.getItem(0))) {
@@ -218,6 +224,7 @@ public class UniversityCriteriaScoreActivity extends AppCompatActivity {
         } else {
             mWorkLifeBalance = 5;
         }
+
 
         // ProfessionalDevelopment
         if (professionalDevelopment.equals(professionalDevelopmentAdapter.getItem(0))) {

@@ -68,6 +68,7 @@ public class UniversityCategoryActivity extends AppCompatActivity {
                         binding.uniCategoryToolbar.setTitle(uni.getUniversityProfile().getName());
                         binding.textView2.setText("Edit Details of University in these Category");
                         existingPhotoUrl = uni.getUniversityProfile().getPhoto();
+
                         university = uni;
                         profileResult = uni.getUniversityProfile();
                         criteriaScoreResult = uni.getUniversityCriteriaScore();
@@ -98,6 +99,7 @@ public class UniversityCategoryActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 int id = item.getItemId();
+
                 if (id == R.id.delete) {
                     showDeleteDialog();
                 }
@@ -135,11 +137,13 @@ public class UniversityCategoryActivity extends AppCompatActivity {
         binding.researchMaterialCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(UniversityCategoryActivity.this, UniversityResearchActivity.class);
                 i.putParcelableArrayListExtra(Constants.KEY_INTENT_RESEARCH, (ArrayList<? extends Parcelable>) researchResult);
                 startActivityForResult(i, RC_RESEARCH);
             }
         });
+
 
         binding.saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,9 +151,8 @@ public class UniversityCategoryActivity extends AppCompatActivity {
                 validateCredentials();
             }
         });
-
-
     }
+
 
     public void showDeleteDialog() {
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
@@ -183,8 +186,11 @@ public class UniversityCategoryActivity extends AppCompatActivity {
                 // update method
                 if (profileResult.getPhotoUri() != null) {
                     showProgressIndicator(true);
+
                     // delete existing photo then reupload
                     // add a check for existing photo deletion later
+
+
                     baseRepository.deleteExistingPhoto(existingPhotoUrl);
                     baseRepository.saveUniversityPhoto(universityId, profileResult.getPhotoUri()).observe(this, new Observer<String>() {
                         @Override
@@ -232,7 +238,6 @@ public class UniversityCategoryActivity extends AppCompatActivity {
 
     }
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -241,9 +246,11 @@ public class UniversityCategoryActivity extends AppCompatActivity {
             if (data != null) {
                 profileResult = data.getParcelableExtra(Constants.KEY_INTENT_PROFILE);
                 binding.profileCheckImageView.setVisibility(View.VISIBLE);
+
                 Log.d("Category", profileResult.getName());
             }
         }
+        // receive input
         if (requestCode == RC_CRITERIA_SCORE && resultCode == RESULT_OK) {
             // receive input
             if (data != null) {
@@ -253,6 +260,7 @@ public class UniversityCategoryActivity extends AppCompatActivity {
             }
         }
         if (requestCode == RC_COURSE && resultCode == RESULT_OK) {
+
             // receive input
             if (data != null) {
                 courseResult = data.getParcelableArrayListExtra(Constants.KEY_INTENT_COURSE);
@@ -261,6 +269,7 @@ public class UniversityCategoryActivity extends AppCompatActivity {
             }
         }
         if (requestCode == RC_RESEARCH && resultCode == RESULT_OK) {
+
             // receive input
             if (data != null) {
                 researchResult = data.getParcelableArrayListExtra(Constants.KEY_INTENT_RESEARCH);
@@ -271,6 +280,7 @@ public class UniversityCategoryActivity extends AppCompatActivity {
     }
 
     public void showProgressIndicator(Boolean showIndicator) {
+
         if (showIndicator) {
             binding.loadingIndiator.setVisibility(View.VISIBLE);
             binding.saveButton.setEnabled(false);
@@ -282,6 +292,7 @@ public class UniversityCategoryActivity extends AppCompatActivity {
     }
 
     public HashMap<String, Course> convertCourseListToHashmap(List<Course> courseList) {
+
         HashMap<String, Course> courseHashMap = new HashMap<>();
         for (Course c : courseList) {
             courseHashMap.put(c.getCourseTitle(), c);
