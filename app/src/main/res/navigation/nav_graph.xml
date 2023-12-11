@@ -16,4 +16,8 @@
         android:id="@+id/criteriaSearchFragment"
         android:name="com.example.unieval.ui.user.criteriasearch.CriteriaSearchFragment"
         android:label="Criteria Search" />
+    <fragment
+        android:id="@+id/professorCriteriaSearchFragment"
+        android:name="com.example.unieval.ui.user.criteriasearchprofessor.ProfessorCriteriaSearchFragment"
+        android:label="Criteria Search" />
 </navigation>

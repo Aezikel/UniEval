@@ -14,8 +14,69 @@
         tools:targetApi="31" >
 
         <activity
+            android:name=".ui.user.evaluationsummaryprofessor.ProfessorEvaluationSummaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.evaluationsummary.EvaluationSummaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.evaluationresultprofessor.ProfessorEvaluationListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.search.SearchableActivity"
+            android:exported="false"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".ui.admin.managereview.review.ManageReviewActivity"
+            android:exported="false"
+            android:theme="@style/ThemeOverlay.Evaluation.Admin" />
+        <activity
+            android:name=".ui.admin.managereview.overview.ReviewOverviewActivity"
+            android:exported="false"
+            android:theme="@style/ThemeOverlay.Evaluation.Admin" />
+        <activity
+            android:name=".ui.admin.manageuniversity.research.UniversityResearchActivity"
+            android:exported="false"
+            android:theme="@style/ThemeOverlay.Evaluation.Admin" />
+        <activity
+            android:name=".ui.admin.manageuniversity.course.UniversityCourseActivity"
+            android:exported="false"
+            android:theme="@style/ThemeOverlay.Evaluation.Admin" />
+        <activity
+            android:name=".ui.admin.manageuniversity.criteriascore.UniversityCriteriaScoreActivity"
+            android:exported="false"
+            android:theme="@style/ThemeOverlay.Evaluation.Admin" />
+        <activity
+            android:name=".ui.admin.manageuniversity.profile.UniversityProfileActivity"
+            android:exported="false"
+            android:theme="@style/ThemeOverlay.Evaluation.Admin" />
+        <activity
+            android:name=".ui.admin.manageuniversity.category.UniversityCategoryActivity"
+            android:exported="false"
+            android:theme="@style/ThemeOverlay.Evaluation.Admin" />
+        <activity
+            android:name=".ui.admin.home.AdminMainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/ThemeOverlay.Evaluation.Admin" />
+        <activity
+            android:name=".ui.user.evaluationresult.EvaluationListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.universitydetails.UniversityDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.user.profile.ProfileActivity"
             android:exported="false" />
+
         <activity
             android:name=".ui.splashscreen.SplashscreenActivity"
             android:exported="true">
@@ -27,7 +88,8 @@
         </activity>
         <activity
             android:name=".ui.user.UserMainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ui.auth.loginuser.UserLoginActivity"
             android:exported="false" />
@@ -37,27 +99,9 @@
         <activity
             android:name=".ui.auth.registeruser.RegisterUserActivity"
             android:exported="false" />
-
-        <activity
-            android:name=".ui.user.search.SearchableActivity"
-            android:exported="false"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
-        </activity>
-
         <activity
             android:name=".ui.auth.forgotpassword.ForgotPasswordActivity"
             android:exported="false" />
-
-
-
-
-
 
     </application>
 
