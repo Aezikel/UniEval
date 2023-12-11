@@ -4,6 +4,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+
+import com.example.unieval.data.pojo.Review;
+import com.example.unieval.databinding.ActivityManageReviewBinding;
+import com.example.unieval.util.Constants;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,10 +24,6 @@ import androidx.lifecycle.Observer;
 import com.bumptech.glide.Glide;
 import com.example.unieval.R;
 import com.example.unieval.data.BaseRepository;
-import com.example.unieval.data.pojo.Review;
-import com.example.unieval.databinding.ActivityManageReviewBinding;
-import com.example.unieval.util.Constants;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class ManageReviewActivity extends AppCompatActivity {
 
@@ -57,6 +58,7 @@ public class ManageReviewActivity extends AppCompatActivity {
             baseRepository.getReview(reviewId).observe(this, new Observer<Review>() {
                 @Override
                 public void onChanged(Review review) {
+
                     if (review != null) {
                         binding.reviewManageToolbar.setTitle("Edit Review");
                         binding.reviewManageToolbar.inflateMenu(R.menu.menu_review);
@@ -87,6 +89,7 @@ public class ManageReviewActivity extends AppCompatActivity {
                 if (id == R.id.done) {
                     validateCredentials();
                 }
+
                 if (id == R.id.delete) {
                     showDeleteDialog();
                 }
@@ -105,7 +108,6 @@ public class ManageReviewActivity extends AppCompatActivity {
                 startActivityForResult(Intent.createChooser(intent, "Complete action using"), RC_PHOTO_PICKER);
             }
         });
-
 
     }
 
@@ -243,6 +245,4 @@ public class ManageReviewActivity extends AppCompatActivity {
             binding.loadingIndiator.setVisibility(View.GONE);
         }
     }
-
-
 }

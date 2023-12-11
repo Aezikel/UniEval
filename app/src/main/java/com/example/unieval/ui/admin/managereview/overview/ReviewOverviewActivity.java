@@ -2,6 +2,9 @@ package com.example.unieval.ui.admin.managereview.overview;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.unieval.ui.user.universitydetails.reviews.ReviewAdapter;
+import com.example.unieval.util.Constants;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,8 +19,6 @@ import com.example.unieval.data.pojo.Review;
 import com.example.unieval.data.pojo.University;
 import com.example.unieval.databinding.ActivityReviewOverviewBinding;
 import com.example.unieval.ui.admin.managereview.review.ManageReviewActivity;
-import com.example.unieval.ui.user.universitydetails.reviews.ReviewAdapter;
-import com.example.unieval.util.Constants;
 
 import java.util.List;
 
@@ -82,8 +83,6 @@ public class ReviewOverviewActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
     }
 
     public void initAdapter() {
@@ -101,6 +100,5 @@ public class ReviewOverviewActivity extends AppCompatActivity {
         });
         binding.reviewRecyclerView.setAdapter(reviewAdapter);
     }
-
 
 }
