@@ -111,6 +111,7 @@ public class AdminMainActivity extends AppCompatActivity {
             }
         };
 
+
         binding.adminNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -150,16 +151,21 @@ public class AdminMainActivity extends AppCompatActivity {
             });
         }
 
+        // search
         binding.adminHomeToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 int id = item.getItemId();
+
                 if (id == R.id.search_menu_item) {
+
                     // Get the SearchView and set the searchable configuration.
                     SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
                     searchView = (SearchView) item.getActionView();
+
                     ComponentName componentName = new ComponentName(AdminMainActivity.this, SearchableActivity.class);
                     SearchableInfo searchableInfo = searchManager.getSearchableInfo(componentName);
+
                     // Assumes current activity is the searchable activity.
                     searchView.setSearchableInfo(searchableInfo);
                 }
@@ -283,11 +289,14 @@ public class AdminMainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+
         if (binding.adminDrawerLayout.isDrawerOpen(GravityCompat.START)) {
             binding.adminDrawerLayout.closeDrawer(GravityCompat.START);
-        } else if (searchView != null && !searchView.isIconified()) {
+        }
+        else if (searchView != null && !searchView.isIconified()) {
             binding.adminHomeToolbar.collapseActionView();
-        } else {
+        }
+        else {
             super.onBackPressed();
         }
     }
