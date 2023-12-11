@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- APP COLOR -->
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorPrimary">#262626</color>
+    <color name="colorPrimaryVariant">#4A6572</color>
+    <color name="colorSecondary">#F9AA33</color>
+    <color name="colorOnSecondary">@color/colorPrimaryDark</color>
+    <color name="colorSurface">#313131</color>
+    <color name="colorOnSurface">@color/white</color>
+    <color name="colorBackground">#313131</color>
+
+    <color name="textColor">#DEDEDE</color>
+    <color name="textColor2">@color/colorOnSecondary</color>
+    <color name="textButtonColor">@color/colorSecondary</color>
+    <color name="iconColor2">#DEDEDE</color>
+    <color name="toolbarColor">@color/colorPrimary</color>
+
+    <color name="iconColor">#DEDEDE</color>
+    <color name="snackBarColor">#383838</color>
+    <color name="dividerColor">#B4BAC0</color>
+    <color name="cardDetailsColor">#4A7BA7</color>
+    <color name="cardDetailsTextColor">@color/colorOnSurface</color>
+
+    <color name="cardViewBackgroundColor">#383838</color>
+    <color name="constrainBackgroundColor">#dedede</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey">#424242</color>
+    <color name="orange">#FF5722</color>
+
+</resources>

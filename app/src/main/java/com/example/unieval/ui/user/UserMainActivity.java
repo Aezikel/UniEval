@@ -35,9 +35,11 @@ import com.example.unieval.data.BaseRepository;
 import com.example.unieval.data.pojo.User;
 import com.example.unieval.databinding.ActivityUserMainBinding;
 import com.example.unieval.ui.auth.loginuser.UserLoginActivity;
+import com.example.unieval.ui.user.profile.ProfileActivity;
 import com.example.unieval.ui.user.search.SearchableActivity;
 import com.example.unieval.util.Constants;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -129,6 +131,29 @@ public class UserMainActivity extends AppCompatActivity {
 
                 return false;
 
+            }
+        });
+
+        binding.userHomepageNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.nav_header_profile) {
+                    startActivity(new Intent(UserMainActivity.this, ProfileActivity.class));
+                    binding.userHomepageDrawerLayout.closeDrawer(GravityCompat.START);
+                }
+                if (item.getItemId() == R.id.nav_header_theme) {
+                    binding.userHomepageDrawerLayout.closeDrawer(GravityCompat.START);
+                    showThemeSelectionDialog();
+                }
+                if (item.getItemId() == R.id.nav_header_about) {
+                    binding.userHomepageDrawerLayout.closeDrawer(GravityCompat.START);
+                    showAboutDialog();
+                }
+                if (item.getItemId() == R.id.nav_header_logout) {
+                    binding.userHomepageDrawerLayout.closeDrawer(GravityCompat.START);
+                    showLogOutDialog();
+                }
+                return false;
             }
         });
 

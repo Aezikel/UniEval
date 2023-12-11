@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             app:navigationIcon="@drawable/baseline_arrow_back_24"
             app:navigationIconTint="?attr/colorOnSurface"
-            app:menu="@menu/menu_done"
+            app:menu="@menu/menu_profile_done"
             app:title="@string/profile" />
 
         <ScrollView
