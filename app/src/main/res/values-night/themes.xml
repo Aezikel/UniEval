@@ -1,8 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-
-
-
     <style name="Theme.Evaluation" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
         <item name="colorPrimary">@color/colorSecondary</item>
@@ -26,7 +23,6 @@
         <item name="textAppearanceHeadline4">@style/TextAppearance.Evaluation.Headline4</item>
         <item name="textAppearanceHeadline5">@style/TextAppearance.Evaluation.Headline5</item>
         <item name="textAppearanceHeadline6">@style/TextAppearance.Evaluation.Headline6</item>
-
         <item name="textAppearanceSubtitle1">@style/TextAppearance.Evaluation.Subtitle1</item>
         <item name="textAppearanceSubtitle2">@style/TextAppearance.Evaluation.Subtitle2</item>
 
