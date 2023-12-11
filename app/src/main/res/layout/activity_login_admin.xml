@@ -3,10 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -36,7 +32,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="80dp"
-            android:text="Administrator"
+            android:text="@string/administrator"
             android:textColor="@color/textColor"
             android:textSize="40sp"
             android:textStyle="bold"
@@ -55,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:hint="Email"
+            android:hint="@string/email"
             app:boxBackgroundColor="?attr/colorSurface"
             app:endIconMode="clear_text"
             app:layout_constraintBottom_toTopOf="@+id/login_admin_password_textInput"
@@ -84,7 +80,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="41dp"
-            android:hint="Password"
+            android:hint="@string/password"
             app:boxBackgroundColor="?attr/colorSurface"
             app:endIconMode="password_toggle"
             app:layout_constraintBottom_toTopOf="@+id/login_admin_login_button"
@@ -110,7 +106,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:enabled="true"
-            android:text="Login"
+            android:text="@string/login"
             android:textColor="@color/textColor2"
             app:backgroundTint="@color/textButtonColor"
             android:textAllCaps="false"

@@ -59,6 +59,7 @@ public class AdminLoginActivity extends AppCompatActivity {
 
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
             signInAdmin(email, password);
+
         } else {
             Toast.makeText(AdminLoginActivity.this, "Please fill in all details", Toast.LENGTH_SHORT).show();
         }
@@ -83,6 +84,8 @@ public class AdminLoginActivity extends AppCompatActivity {
                                     }
                                 });
                             }
+
+
                         } else {
                             // If sign in fails, display a message to the user.
                             showProgressIndicator(false);
@@ -94,6 +97,8 @@ public class AdminLoginActivity extends AppCompatActivity {
                 });
     }
 
+
+
     public void signInAdmin(String email, String password) {
         showProgressIndicator(true);
         baseRepository.isUserValid(email, Constants.ROLE_ADMIN).observe(this, new Observer<Boolean>() {
@@ -101,6 +106,7 @@ public class AdminLoginActivity extends AppCompatActivity {
             public void onChanged(Boolean aBoolean) {
                 if (aBoolean) {
                     signInAdminEmailAndPassword(email, password);
+
                 } else {
                     showProgressIndicator(false);
                     Toast.makeText(AdminLoginActivity.this, "User not found", Toast.LENGTH_SHORT).show();
@@ -109,6 +115,8 @@ public class AdminLoginActivity extends AppCompatActivity {
         });
 
     }
+
+
 
     public void showProgressIndicator(Boolean showIndicator) {
         if (showIndicator) {
