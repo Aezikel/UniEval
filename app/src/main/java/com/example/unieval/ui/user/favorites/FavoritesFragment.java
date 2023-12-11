@@ -18,7 +18,6 @@ import com.example.unieval.ui.user.UserMainActivity;
 import com.example.unieval.ui.user.universitydetails.UniversityDetailActivity;
 import com.example.unieval.util.Constants;
 import com.google.firebase.auth.FirebaseAuth;
-import java.util.ArrayList;
 import java.util.List;
 
 public class FavoritesFragment extends Fragment {
@@ -38,6 +37,7 @@ public class FavoritesFragment extends Fragment {
         baseRepository = new BaseRepository();
         initAdapter();
 
+
         if (firebaseAuth.getCurrentUser() != null) {
             baseRepository.getFavouriteUniversity(firebaseAuth.getCurrentUser().getUid()).observe(getViewLifecycleOwner(), new Observer<List<University>>() {
                 @Override
@@ -53,9 +53,13 @@ public class FavoritesFragment extends Fragment {
                 }
             });
         }
-
         return binding.getRoot();
     }
+
+
+
+
+
 
     public void initAdapter() {
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
@@ -74,5 +78,4 @@ public class FavoritesFragment extends Fragment {
         });
         binding.favouriteRecyclerView.setAdapter(universityAdapter);
     }
-
 }
