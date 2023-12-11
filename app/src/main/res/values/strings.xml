@@ -58,4 +58,7 @@
     <string name="sign_up">Sign up</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="log_in">Log in</string>
+    <string name="remember_password">Remember Password?</string>
+    <string name="confirm">Confirm</string>
+    <string name="reset">Reset</string>
 </resources>

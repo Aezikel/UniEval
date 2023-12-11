@@ -17,6 +17,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/list_item_university" />
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/user_favourite_empty_state"
             android:layout_width="wrap_content"
@@ -26,6 +27,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
 
             <ImageView
                 android:id="@+id/profile_page_imageView"
