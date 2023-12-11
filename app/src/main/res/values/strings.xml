@@ -49,4 +49,7 @@
     <string name="profile">Profile</string>
     <string name="b19_3lz_leicester">B19 3LZ. Leicester</string>
     <string name="university_of_leicester">University of Leicester</string>
+    <string name="research_field">Research Field</string>
+    <string name="work_life_balance">Work life balance</string>
+    <string name="professional_development">Professional development</string>
 </resources>
