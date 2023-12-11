@@ -14,4 +14,5 @@
     <string name="delete">Delete</string>
     <string name="app_label">UniEval</string>
     <string name="search_hint">Enter University Name</string>
+    <string name="nothing_to_display">Nothing to display</string>
 </resources>
