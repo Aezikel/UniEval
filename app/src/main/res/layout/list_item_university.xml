@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="B19 3LZ. Leicester"
+        android:text="@string/b19_3lz_leicester"
         android:textAppearance="?attr/textAppearanceBody2"
         app:layout_constraintBottom_toBottomOf="@+id/uni_listItem_university_imageCardView"
         app:layout_constraintStart_toStartOf="@+id/uni_listItem_university_textview"
@@ -69,12 +69,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="University of Leicester"
+        android:text="@string/university_of_leicester"
         android:textAppearance="?attr/textAppearanceBody1"
         app:layout_constraintBottom_toTopOf="@+id/uni_listItem_university_textview2"
         app:layout_constraintStart_toEndOf="@+id/uni_listItem_university_imageCardView"
         app:layout_constraintTop_toTopOf="@+id/uni_listItem_university_imageCardView" />
-
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"

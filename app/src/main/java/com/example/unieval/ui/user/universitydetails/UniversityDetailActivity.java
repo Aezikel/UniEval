@@ -20,7 +20,6 @@ import com.example.unieval.util.Constants;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.google.firebase.auth.FirebaseAuth;
 
-
 public class UniversityDetailActivity extends AppCompatActivity {
 
     ActivityUniversityDetailBinding binding;
