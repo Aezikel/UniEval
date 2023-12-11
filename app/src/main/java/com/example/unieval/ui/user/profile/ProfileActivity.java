@@ -20,7 +20,6 @@ import com.example.unieval.data.pojo.User;
 import com.example.unieval.databinding.ActivityProfileBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
 public class ProfileActivity extends AppCompatActivity {
 
     ActivityProfileBinding binding;
@@ -109,6 +108,7 @@ public class ProfileActivity extends AppCompatActivity {
             FirebaseUser user = firebaseAuth.getCurrentUser();
             if (data != null && user != null) {
                 Uri selectedImageUri = data.getData();
+
                 //Sending the chosen picture to firebase storage and creating a database reference to it
                 baseRepository.updateProfilePhoto(firebaseAuth.getCurrentUser().getUid(), selectedImageUri, currentPhoto);
             }
@@ -117,6 +117,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
     public void validateCredentials() {
+
         //Validate inputs
         String title = binding.profilePageTitleEditText.getText().toString();
         String firstName = binding.profilePageFirstNameEditText.getText().toString().trim();
