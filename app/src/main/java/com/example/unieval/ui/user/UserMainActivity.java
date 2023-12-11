@@ -115,28 +115,28 @@ public class UserMainActivity extends AppCompatActivity {
         };
 
 
-        binding.userHomepageNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        // search user
+        binding.userHomepageToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.nav_header_profile) {
-                    startActivity(new Intent(UserMainActivity.this, ProfileActivity.class));
-                    binding.userHomepageDrawerLayout.closeDrawer(GravityCompat.START);
+            public boolean onMenuItemClick(MenuItem item) {
+                int id = item.getItemId();
+                if (id == R.id.search_menu_item) {
+
+                    // Get the SearchView and set the searchable configuration.
+                    SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+                    searchView = (SearchView) item.getActionView();
+                    ComponentName componentName = new ComponentName(UserMainActivity.this, SearchableActivity.class);
+                    SearchableInfo searchableInfo = searchManager.getSearchableInfo(componentName);
+
+                    // Assumes current activity is the searchable activity.
+                    searchView.setSearchableInfo(searchableInfo);
                 }
-                if (item.getItemId() == R.id.nav_header_theme) {
-                    binding.userHomepageDrawerLayout.closeDrawer(GravityCompat.START);
-                    showThemeSelectionDialog();
-                }
-                if (item.getItemId() == R.id.nav_header_about) {
-                    binding.userHomepageDrawerLayout.closeDrawer(GravityCompat.START);
-                    showAboutDialog();
-                }
-                if (item.getItemId() == R.id.nav_header_logout) {
-                    binding.userHomepageDrawerLayout.closeDrawer(GravityCompat.START);
-                    showLogOutDialog();
-                }
+
                 return false;
+
             }
         });
+
 
         if (mAuth.getCurrentUser() != null) {
             baseRepository.getUser(mAuth.getCurrentUser().getUid()).observe(this, new Observer<User>() {
