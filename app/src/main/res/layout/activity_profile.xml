@@ -3,10 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,7 +15,7 @@
             app:navigationIcon="@drawable/baseline_arrow_back_24"
             app:navigationIconTint="?attr/colorOnSurface"
             app:menu="@menu/menu_done"
-            app:title="Profile" />
+            app:title="@string/profile" />
 
         <ScrollView
             android:id="@+id/profile_page_scrollView"
@@ -69,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="64dp"
-                    android:hint="Title"
+                    android:hint="@string/title"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/profile_page_imageCardView"
                     app:startIconDrawable="@drawable/outline_title_24">
@@ -91,7 +87,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="64dp"
                     android:layout_marginEnd="24dp"
-                    android:hint="User type"
+                    android:hint="@string/user_type"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/profile_page_title_inputLayout"
                     app:layout_constraintTop_toBottomOf="@+id/profile_page_imageCardView"
@@ -113,7 +109,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="24dp"
-                    android:hint="First name"
+                    android:hint="@string/first_name"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/profile_page_title_inputLayout"
@@ -124,7 +120,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName" />
-
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -135,11 +130,12 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="24dp"
-                    android:hint="Last name"
+                    android:hint="@string/last_name"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/profile_page_firstName_inputLayout"
                     app:startIconDrawable="@drawable/outline_filter_2_24">
+
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/profile_page_lastName_editText"
@@ -149,6 +145,7 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/profile_page_email_inputLayout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -157,7 +154,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="24dp"
-                    android:hint="Email"
+                    android:hint="@string/email"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/profile_page_lastName_inputLayout"
@@ -168,7 +165,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName" />
-
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -179,7 +175,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="24dp"
-                    android:hint="Phone"
+                    android:hint="@string/phone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/profile_page_email_inputLayout"
@@ -193,6 +189,8 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/profile_page_discipline_inputLayout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -202,7 +200,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="24dp"
                     android:layout_marginBottom="32dp"
-                    android:hint="Discipline"
+                    android:hint="@string/discipline"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -221,7 +219,7 @@
 
         </ScrollView>
 
-
     </LinearLayout>
+
 </layout>
 

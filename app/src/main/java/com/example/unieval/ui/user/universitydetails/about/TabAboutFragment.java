@@ -4,14 +4,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
-
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import com.example.unieval.R;
 import com.example.unieval.data.BaseRepository;
 import com.example.unieval.data.pojo.University;
@@ -41,6 +39,7 @@ public class TabAboutFragment extends Fragment {
         universityId = activity.universityId;
 
         if (universityId != null) {
+
             baseRepository.getUniversity(universityId).observe(getViewLifecycleOwner(), new Observer<University>() {
                 @Override
                 public void onChanged(University university) {
@@ -85,6 +84,7 @@ public class TabAboutFragment extends Fragment {
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(getContext());
         builder.setTitle("Overview");
         builder.setMessage(message);
+
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 dialog.dismiss();
@@ -95,20 +95,16 @@ public class TabAboutFragment extends Fragment {
         builder.show();
     }
 
-
-
-    public void dialPhoneNumber(String mobile) {
+    public void dialPhoneNumber(String phone) {
         Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:" + mobile));
-
+        intent.setData(Uri.parse("tel:" + phone));
         if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
             startActivity(intent);
         }
     }
 
-    public void composeEmail(String email) {
-        String[] addresses = {email};
-
+    public void composeEmail(String address) {
+        String[] addresses = {address};
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
         intent.putExtra(Intent.EXTRA_EMAIL, addresses);

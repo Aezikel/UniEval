@@ -7,21 +7,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.example.unieval.R;
 import com.example.unieval.data.pojo.Review;
-
 import java.util.List;
 
 public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewViewHolder> {
-
     List<Review> reviews;
     final private ListItemClickListener mOnclickListener;
-
     public ReviewAdapter(ListItemClickListener mOnclickListener) {
         this.mOnclickListener = mOnclickListener;
     }
@@ -29,7 +24,6 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewView
     public interface ListItemClickListener {
         void onListItemClick(String reviewId);
     }
-
     @NonNull
     @Override
     public ReviewViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -55,18 +49,14 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewView
     public int getItemCount() {
         if (reviews != null) {
             return reviews.size();
-        } else {
-            return 0;
-        }
+        } else {return 0;}
     }
 
     public void setList(List<Review> reviews) {
         this.reviews = reviews;
         notifyDataSetChanged();
     }
-
     class ReviewViewHolder extends RecyclerView.ViewHolder {
-
         ImageView reviewImageView;
         TextView reviewName, reviewClass, reviewMessage;
         RatingBar reviewRating;
@@ -84,8 +74,8 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewView
                     int clickedPosition = getAdapterPosition();
                     mOnclickListener.onListItemClick(reviews.get(clickedPosition).getReviewId());
                 }
-            });
+            }
+            );
         }
     }
-
 }

@@ -3,10 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,50 +22,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <!--            <TextView-->
-                <!--                android:id="@+id/textView4"-->
-                <!--                android:layout_width="wrap_content"-->
-                <!--                android:layout_height="wrap_content"-->
-                <!--                android:layout_marginStart="16dp"-->
-                <!--                android:layout_marginTop="16dp"-->
-                <!--                android:text="Rating"-->
-                <!--                android:textAlignment="viewStart"-->
-                <!--                android:textColor="@color/black"-->
-                <!--                android:textStyle="bold"-->
-                <!--                app:layout_constraintStart_toStartOf="parent"-->
-                <!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-                <!--            <TextView-->
-                <!--                android:id="@+id/textView"-->
-                <!--                android:layout_width="wrap_content"-->
-                <!--                android:layout_height="wrap_content"-->
-                <!--                android:layout_marginStart="16dp"-->
-                <!--                android:layout_marginTop="8dp"-->
-                <!--                android:text="4.3"-->
-                <!--                android:textColor="@color/black"-->
-                <!--                android:textSize="48sp"-->
-                <!--                app:layout_constraintStart_toStartOf="parent"-->
-                <!--                app:layout_constraintTop_toBottomOf="@+id/textView4" />-->
-
-                <!--            <RatingBar-->
-                <!--                android:id="@+id/ratingBar"-->
-                <!--                style="?android:attr/ratingBarStyleSmall"-->
-                <!--                android:layout_width="wrap_content"-->
-                <!--                android:layout_height="wrap_content"-->
-                <!--                android:layout_marginStart="16dp"-->
-                <!--                android:rating="4"-->
-                <!--                android:progressTint="@color/grey"-->
-                <!--                app:layout_constraintBottom_toBottomOf="@+id/textView"-->
-                <!--                app:layout_constraintStart_toEndOf="@+id/textView"-->
-                <!--                app:layout_constraintTop_toTopOf="@+id/textView" />-->
-
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:text="Overview"
+                    android:text="@string/overview"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     android:textColor="@color/textColor"
                     android:textSize="16sp"
@@ -99,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
-                    android:text="READ MORE"
+                    android:text="@string/read_more"
                     android:textAppearance="?attr/textAppearanceCaption"
                     android:textStyle="bold"
                     android:textColor="@color/textButtonColor"
@@ -112,26 +71,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="32dp"
-                    android:text="Awards"
+                    android:text="@string/award"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     android:textColor="@color/textColor"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-                <!--            <androidx.recyclerview.widget.RecyclerView-->
-                <!--                android:id="@+id/recyclerView2"-->
-                <!--                android:layout_width="wrap_content"-->
-                <!--                android:layout_height="wrap_content"-->
-                <!--                android:layout_marginTop="16dp"-->
-                <!--                android:orientation="horizontal"-->
-                <!--                app:layout_constraintEnd_toEndOf="parent"-->
-                <!--                app:layout_constraintStart_toStartOf="parent"-->
-                <!--                app:layout_constraintTop_toBottomOf="@+id/textView8"-->
-                <!--                tools:itemCount="3"-->
-                <!--                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-                <!--                tools:listitem="@layout/list_item_award" />-->
-
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/award_imageCardView"
@@ -160,7 +105,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Anderson"
+                    android:text="@string/anderson"
                     android:textAlignment="center"
                     android:textAppearance="?attr/textAppearanceCaption"
                     app:layout_constraintEnd_toEndOf="@+id/award_imageCardView"
@@ -171,7 +116,8 @@
                     android:id="@+id/textViews1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Award"
+                    android:text="award
+"
                     android:textAppearance="?attr/textAppearanceCaption"
                     app:layout_constraintEnd_toEndOf="@+id/textViews"
                     app:layout_constraintStart_toStartOf="@+id/textViews"
@@ -205,7 +151,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Liberty"
+                    android:text="@string/liberty"
                     android:textAlignment="center"
                     android:textAppearance="?attr/textAppearanceCaption"
                     app:layout_constraintEnd_toEndOf="@+id/award_imageCardView1"
@@ -216,7 +162,7 @@
                     android:id="@+id/textViews3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Award"
+                    android:text="@string/award"
                     android:textAppearance="?attr/textAppearanceCaption"
                     app:layout_constraintEnd_toEndOf="@+id/textViews2"
                     app:layout_constraintStart_toStartOf="@+id/textViews2"
@@ -250,7 +196,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="BPC"
+                    android:text="@string/bpc"
                     android:textAlignment="center"
                     android:textAppearance="?attr/textAppearanceCaption"
                     app:layout_constraintEnd_toEndOf="@+id/award_imageCardView2"
@@ -261,7 +207,7 @@
                     android:id="@+id/textViews5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Award"
+                    android:text="@string/award"
                     android:textAppearance="?attr/textAppearanceCaption"
                     app:layout_constraintEnd_toEndOf="@+id/textViews4"
                     app:layout_constraintStart_toStartOf="@+id/textViews4"
@@ -296,7 +242,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Illustration"
+                    android:text="@string/illustration"
                     android:textAlignment="center"
                     android:textAppearance="?attr/textAppearanceCaption"
                     app:layout_constraintEnd_toEndOf="@+id/award_imageCardView3"
@@ -307,7 +253,7 @@
                     android:id="@+id/textViews7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Award"
+                    android:text="@string/award"
                     android:textAppearance="?attr/textAppearanceCaption"
                     app:layout_constraintEnd_toEndOf="@+id/textViews6"
                     app:layout_constraintStart_toStartOf="@+id/textViews6"
@@ -322,7 +268,7 @@
                     android:layout_height="0dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="32dp"
-                    android:text="Mission Statement"
+                    android:text="@string/mission_statement"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     android:textColor="@color/textColor"
                     android:textSize="16sp"
@@ -428,7 +374,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </ScrollView>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

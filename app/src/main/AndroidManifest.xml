@@ -37,9 +37,26 @@
         <activity
             android:name=".ui.auth.registeruser.RegisterUserActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".ui.user.search.SearchableActivity"
+            android:exported="false"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
         <activity
             android:name=".ui.auth.forgotpassword.ForgotPasswordActivity"
             android:exported="false" />
+
+
+
+
 
 
     </application>
