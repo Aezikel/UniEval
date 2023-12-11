@@ -39,4 +39,12 @@
     <string name="min">Min</string>
     <string name="fees">Fees</string>
     <string name="course">Course</string>
+    <string name="discipline">Discipline</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="last_name">Last name</string>
+    <string name="first_name">First name</string>
+    <string name="user_type">User type</string>
+    <string name="title">Title</string>
+    <string name="profile">Profile</string>
 </resources>
