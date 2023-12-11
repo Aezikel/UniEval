@@ -3,10 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/admin_drawerLayout"
         android:layout_width="match_parent"
@@ -30,6 +26,7 @@
                 app:navigationIconTint="@color/white"
                 app:titleTextColor="@color/white"
                 app:title="Home" />
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/admin_home_recyclerview"
@@ -79,18 +76,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Nothing to display"
+                    android:text="@string/nothing_to_display"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/profile_page_imageView"
                     app:layout_constraintStart_toStartOf="@+id/profile_page_imageView"
                     app:layout_constraintTop_toBottomOf="@+id/profile_page_imageView" />
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/admin_navigationView"
