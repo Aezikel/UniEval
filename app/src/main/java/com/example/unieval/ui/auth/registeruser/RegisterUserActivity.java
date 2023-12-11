@@ -24,6 +24,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class RegisterUserActivity extends AppCompatActivity {
 
@@ -83,12 +84,14 @@ public class RegisterUserActivity extends AppCompatActivity {
                 }
                 User user = new User(Constants.ROLE_USER, email, firstName, lastName, userCategory);
                 createUser(user, password);
+
             } else {
                 binding.registerPasswordTextInput.setErrorEnabled(true);
                 binding.registerPasswordTextInput.setError("Password does not match");
                 binding.registerConfirmPasswordTextInput.setErrorEnabled(true);
                 binding.registerConfirmPasswordTextInput.setError("Password does not match");
             }
+
         } else {
             Toast.makeText(RegisterUserActivity.this, "Please fill in all details", Toast.LENGTH_SHORT).show();
         }

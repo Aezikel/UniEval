@@ -4,19 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
 import com.example.unieval.R;
 import com.example.unieval.data.BaseRepository;
 import com.example.unieval.data.pojo.User;
 import com.example.unieval.databinding.ActivityLoginUserBinding;
-import com.example.unieval.ui.admin.home.AdminMainActivity;
 import com.example.unieval.ui.auth.forgotpassword.ForgotPasswordActivity;
 import com.example.unieval.ui.auth.loginadmin.AdminLoginActivity;
 import com.example.unieval.ui.auth.registeruser.RegisterUserActivity;
@@ -39,7 +36,6 @@ public class UserLoginActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login_user);
 
         baseRepository = new BaseRepository();
-
         mAuth = FirebaseAuth.getInstance();
 
         binding.loginUserForgotPasswordTextview.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +72,6 @@ public class UserLoginActivity extends AppCompatActivity {
                 finish();
             }
         });
-
 
     }
 
@@ -145,5 +140,4 @@ public class UserLoginActivity extends AppCompatActivity {
             binding.loginUserLoginButton.setEnabled(true);
         }
     }
-
 }
