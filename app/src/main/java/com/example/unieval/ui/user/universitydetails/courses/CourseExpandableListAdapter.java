@@ -7,11 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.unieval.R;
 import com.example.unieval.data.pojo.Course;
 import com.example.unieval.util.Constants;
-
 import java.util.HashMap;
 import java.util.List;
 
@@ -65,22 +63,27 @@ public class CourseExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
         String listTitle = (String) getGroup(groupPosition);
+
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this.context.
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.list_item_group_discipline, null);
         }
+
         ImageView disciplineImageView = convertView.findViewById(R.id.discipline_imageView);
         TextView disciplineCourseAmount = convertView.findViewById(R.id.discipline_courseSizeTextView);
         TextView disciplineTitle = convertView.findViewById(R.id.discipline_textView);
 
         if (listTitle.equals(Constants.DISCIPLINE_ENGINEERING)) {
             disciplineImageView.setImageResource(R.drawable.baseline_build_24);
-        } else if (listTitle.equals(Constants.DISCIPLINE_ART_AND_HUMANITY)) {
+        }
+        else if (listTitle.equals(Constants.DISCIPLINE_ART_AND_HUMANITY)) {
             disciplineImageView.setImageResource(R.drawable.baseline_format_paint_24);
-        } else if (listTitle.equals(Constants.DISCIPLINE_BUSINESS)) {
+        }
+        else if (listTitle.equals(Constants.DISCIPLINE_BUSINESS)) {
             disciplineImageView.setImageResource(R.drawable.baseline_monetization_on_24);
-        } else {
+        }
+        else {
             disciplineImageView.setImageResource(R.drawable.baseline_science_24);
         }
 
@@ -100,6 +103,7 @@ public class CourseExpandableListAdapter extends BaseExpandableListAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.list_item_child_discipline, null);
         }
+
         TextView courseTitleTextView = convertView.findViewById(R.id.course_titleTextView);
         TextView coursePriceTextView = convertView.findViewById(R.id.course_priceTextView);
 

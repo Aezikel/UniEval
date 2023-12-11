@@ -4,11 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
-
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import com.example.unieval.R;
 import com.example.unieval.data.BaseRepository;
 import com.example.unieval.data.pojo.Course;
@@ -16,10 +17,6 @@ import com.example.unieval.data.pojo.University;
 import com.example.unieval.databinding.FragmentTabCourseBinding;
 import com.example.unieval.ui.user.universitydetails.UniversityDetailActivity;
 import com.example.unieval.util.Constants;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 public class TabCourseFragment extends Fragment {
 
@@ -33,7 +30,6 @@ public class TabCourseFragment extends Fragment {
     public TabCourseFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -59,12 +55,12 @@ public class TabCourseFragment extends Fragment {
                 }
             });
         }
-
         return binding.getRoot();
     }
 
     public List<Course> segmentList(List<Course> masterList, String discipline) {
         List<Course> disciplineList = new ArrayList<>();
+
         for (Course c : masterList) {
             if (c.getCourseDiscipline().equals(discipline)) {
                 // create discipline list
@@ -86,6 +82,7 @@ public class TabCourseFragment extends Fragment {
         expandableListDetail.put("Art and Humanities", art);
         expandableListDetail.put("Science", science);
         expandableListDetail.put("Business", business);
+
 
         return expandableListDetail;
     }
