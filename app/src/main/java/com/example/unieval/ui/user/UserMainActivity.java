@@ -191,6 +191,7 @@ public class UserMainActivity extends AppCompatActivity {
 
     }
 
+
     public void showThemeSelectionDialog() {
         MaterialAlertDialogBuilder materialAlertDialogBuilder = new MaterialAlertDialogBuilder(UserMainActivity.this)
                 .setTitle("Choose Theme")
@@ -204,9 +205,8 @@ public class UserMainActivity extends AppCompatActivity {
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
-                        ListView lw = ((androidx.appcompat.app.AlertDialog) dialogInterface).getListView();
-                        int checkedItem = lw.getCheckedItemPosition();
+                        ListView listView = ((androidx.appcompat.app.AlertDialog) dialogInterface).getListView();
+                        int checkedItem = listView.getCheckedItemPosition();
 
                         switch (checkedItem) {
                             case 0:
@@ -215,17 +215,16 @@ public class UserMainActivity extends AppCompatActivity {
                             case 1:
                                 themeMode = AppCompatDelegate.MODE_NIGHT_NO;
                         }
-
                         SharedPreferences.Editor editor = preferences.edit();
                         editor.putInt("ThemeMode", themeMode);
                         editor.apply();
-
                         applyThemeMode(themeMode);
                     }
                 });
-
         materialAlertDialogBuilder.create().show();
     }
+
+
 
     public void showAboutDialog() {
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
@@ -236,7 +235,6 @@ public class UserMainActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-
         builder.setCancelable(false);
         builder.show();
     }
