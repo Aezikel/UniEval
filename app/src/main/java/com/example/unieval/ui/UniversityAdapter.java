@@ -17,13 +17,16 @@ import com.example.unieval.data.pojo.University;
 import java.util.List;
 
 public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.UniversityViewHolder> {
-
     final private ListItemClickListener mOnclickListener;
     List<University> universities;
 
     public UniversityAdapter(ListItemClickListener mOnclickListener) {
         this.mOnclickListener = mOnclickListener;
     }
+
+
+
+
 
     @NonNull
     @Override
@@ -45,6 +48,8 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Un
         }
     }
 
+
+
     @Override
     public int getItemCount() {
         if (universities != null) {
@@ -64,6 +69,8 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Un
 
     }
 
+
+
     class UniversityViewHolder extends RecyclerView.ViewHolder {
 
         ImageView uniImageView;
@@ -82,6 +89,8 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Un
                     mOnclickListener.onListItemClick(universities.get(clickedPosition).getUniversityId());
                 }
             });
+
+
         }
     }
 

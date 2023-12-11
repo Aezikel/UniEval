@@ -47,4 +47,18 @@
     <string name="user_type">User type</string>
     <string name="title">Title</string>
     <string name="profile">Profile</string>
+    <string name="b19_3lz_leicester">B19 3LZ. Leicester</string>
+    <string name="university_of_leicester">University of Leicester</string>
+    <string name="research_field">Research Field</string>
+    <string name="work_life_balance">Work life balance</string>
+    <string name="professional_development">Professional development</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="log_in">Log in</string>
+    <string name="remember_password">Remember Password?</string>
+    <string name="confirm">Confirm</string>
+    <string name="reset">Reset</string>
 </resources>

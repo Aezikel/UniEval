@@ -3,7 +3,6 @@ package com.example.unieval.ui.auth.forgotpassword;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +10,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
 import com.example.unieval.R;
 import com.example.unieval.databinding.ActivityForgotPasswordBinding;
 import com.example.unieval.ui.auth.loginuser.UserLoginActivity;
@@ -77,15 +75,18 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     }
 
     private void showMailSentDialog(String email) {
+
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
         builder.setTitle("Check your email");
         builder.setMessage("Follow the instructions sent to " + email + " to recover your password.");
+
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 startActivity(new Intent(ForgotPasswordActivity.this, UserLoginActivity.class));
                 finish();
             }
         });
+
         builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
