@@ -2,16 +2,8 @@ package com.example.unieval.ui.user.home;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.unieval.R;
 import com.example.unieval.data.BaseRepository;
 import com.example.unieval.data.pojo.University;
@@ -20,21 +12,22 @@ import com.example.unieval.ui.UniversityAdapter;
 import com.example.unieval.ui.user.UserMainActivity;
 import com.example.unieval.ui.user.universitydetails.UniversityDetailActivity;
 import com.example.unieval.util.Constants;
-
+import androidx.lifecycle.Observer;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
-
     FragmentHomeBinding binding;
     UniversityAdapter universityAdapter;
     BaseRepository baseRepository;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false);
-
         baseRepository = new BaseRepository();
         initAdapter();
 
