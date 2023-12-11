@@ -17,8 +17,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:text="Login"
-            android:textColor="?attr/colorOnSurface"
+            android:text="@string/login"
+            android:textColor="@color/textColor"
             android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/login_admin_administrator_text"
@@ -37,7 +37,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="80dp"
             android:text="Administrator"
-            android:textColor="?attr/colorOnSurface"
+            android:textColor="@color/textColor"
             android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/login_admin_email_textInput"
@@ -83,10 +83,11 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
+            android:layout_marginBottom="41dp"
             android:hint="Password"
             app:boxBackgroundColor="?attr/colorSurface"
             app:endIconMode="password_toggle"
-            app:layout_constraintBottom_toTopOf="@+id/login_admin_sessionType_textInput"
+            app:layout_constraintBottom_toTopOf="@+id/login_admin_login_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_admin_email_textInput"
@@ -101,51 +102,29 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/login_admin_sessionType_textInput"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:hint="Session type"
-            app:boxBackgroundColor="?attr/colorSurface"
-            app:layout_constraintBottom_toTopOf="@+id/login_admin_login_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_admin_password_textInput"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:startIconDrawable="@drawable/outline_supervisor_account_24">
-
-            <AutoCompleteTextView
-                android:id="@+id/login_admin_sessionType_autoComplete"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none" />
-        </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.button.MaterialButton
             android:id="@+id/login_admin_login_button"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="40dp"
             android:layout_marginEnd="24dp"
+            android:enabled="true"
             android:text="Login"
+            android:textColor="@color/textColor2"
+            app:backgroundTint="@color/textButtonColor"
             android:textAllCaps="false"
             app:layout_constraintBottom_toTopOf="@+id/login_admin_regularUser_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_admin_sessionType_textInput"
+            app:layout_constraintTop_toBottomOf="@+id/login_admin_password_textInput"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/login_admin_regularUser_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="24dp"
             android:text="Regular user?"
             android:textAppearance="?attr/textAppearanceSubtitle2"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -161,12 +140,36 @@
             android:layout_marginStart="4dp"
             android:text="Login"
             android:textAppearance="?attr/textAppearanceSubtitle2"
-            android:textColor="?attr/colorPrimary"
+            android:textColor="@color/textButtonColor"
             app:layout_constraintBottom_toBottomOf="@+id/login_admin_regularUser_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/login_admin_regularUser_text"
-            app:layout_constraintTop_toTopOf="@+id/login_admin_regularUser_text"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="@+id/login_admin_regularUser_text" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loading_indiator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#90000000"
+            android:clickable="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                app:indicatorColor="?attr/colorSecondary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:trackThickness="20dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
